@@ -79,7 +79,7 @@ const handleSubmitNewURL = (event) => {
             <div style={{fontSize:'12px', marginTop:'5px'}}>
             <b style={{display:'block', width: '290px', backgroundColor:'lightgray', color:'black'}}>{item.title.substring(0,50)}</b>
             <p style={{marginTop:'2px', color:'white'}}>{item.desc.substring(0,300)}</p>
-            <a style={{marginTop:'0px', color:'lightblue', textDecoration:'none'}} href={item.url}>{item.url}</a>
+            <a style={{marginTop:'0px', color:'lightblue', textDecoration:'none'}} target="_blank" href={item.url}>{item.url}</a>
             </div>
 ))}   <br />
 </div>
