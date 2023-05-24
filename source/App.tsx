@@ -11,7 +11,7 @@ import $ from 'jquery';
 const Promise = require("bluebird");
 const getJson = require("axios-get-json-response");
 const cheerio = require("cheerio");
-const server = "";
+const server = "http://www.tbwebspecialist.nl/searchengine/";
 
 function App() {
  var [toggleAddurl, setAddUrl] =useState(false);
