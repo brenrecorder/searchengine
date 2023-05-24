@@ -11,7 +11,7 @@ import $ from 'jquery';
 const Promise = require("bluebird");
 const getJson = require("axios-get-json-response");
 const cheerio = require("cheerio");
-const server = "http://tbwebspecialist.nl/searchengine/";
+const server = "";
 
 function App() {
  var [toggleAddurl, setAddUrl] =useState(false);
@@ -20,7 +20,7 @@ function App() {
 
 const handleSubmit = (event) => {
         event.preventDefault();
-    const response = axios.get('http://tbwebspecialist.nl/searchengine/searchengine.php?action=pagesjson&search=' + searchVar)
+    const response = axios.get(server + 'searchengine.php?action=pagesjson&search=' + searchVar)
   .then(function (response) {
     console.log(response.data);
  setretrievedpages(JSON.parse(JSON.stringify(response.data)));
@@ -50,7 +50,7 @@ setnewurlLink(evt.target.value)
 const handleSubmitNewURL = (event) => {
         event.preventDefault();
 
-    const response = axios.get('http://tbwebspecialist.nl/searchengine/searchengine.php?action=addpage&url=' + newURlLink +"&title=" +newURlTitle+ "&desc="+newURlDesc)
+    const response = axios.get(server + 'searchengine.php?action=addpage&url=' + newURlLink +"&title=" +newURlTitle+ "&desc="+newURlDesc)
   .then(function (response) {
     console.log(response.data);
   setAddUrl(false);
