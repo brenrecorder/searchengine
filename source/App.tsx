@@ -73,7 +73,7 @@ const handleSubmitNewURL = (event) => {
    )}
 
    {!toggleAddurl && (
-<div id='searchpage' style={{ marginTop: '15px', height: '590px', overflow: 'auto', width: '290px', border:'0px solid black', borderRadius:'3px' }} > 
+<div id='searchpage' style={{ marginTop: '15px', height: '590px', overflow: 'auto', width: '310px', border:'0px solid black', borderRadius:'3px' }} > 
 {retrievedpages.length >0 && ( <p style={{fontSize:'12px', marginTop:'5px', marginLeft:'10px'}}>Found: {retrievedpages.length} results</p> )}
         {retrievedpages.slice(0, 250).map((item, index) => (
             <div style={{fontSize:'12px', marginTop:'5px'}}>
